@@ -1,0 +1,93 @@
+const students = [
+    { id: 1, name: "Nguyen Van An", age: 20, score: 8.5 },
+    { id: 2, name: "Tran Thi Binh", age: 19, score: 6.5 },
+    { id: 3, name: "Le Van Cuong", age: 21, score: 4.5 },
+    { id: 4, name: "Pham Thi Dung", age: 20, score: 9.0 },
+    { id: 5, name: "Hoang Van Em", age: 22, score: 5.5 },
+    { id: 6, name: "Do Minh Anh", age: 19, score: 7.5 },
+    { id: 7, name: "Bui Quang Huy", age: 20, score: 3.5 },
+    { id: 8, name: "Nguyen Thi Lan", age: 21, score: 8.0 },
+    { id: 9, name: "Tran Duc Long", age: 22, score: 6.0 },
+    { id: 10, name: "Le Thu Ha", age: 20, score: 9.5 },
+    { id: 11, name: "Pham Minh Khang", age: 19, score: 5.0 },
+    { id: 12, name: "Vo Ngoc Mai", age: 21, score: 7.0 },
+    { id: 13, name: "Dang Tuan Nam", age: 20, score: 4.0 },
+    { id: 14, name: "Hoang Thu Phuong", age: 22, score: 8.8 },
+    { id: 15, name: "Nguyen Gia Bao", age: 19, score: 6.8 },
+    { id: 16, name: "Tran Minh Quan", age: 20, score: 7.8 },
+    { id: 17, name: "Le Ngoc Son", age: 21, score: 2.5 },
+    { id: 18, name: "Pham Hai Yen", age: 22, score: 9.2 },
+    { id: 19, name: "Bui Thanh Tung", age: 20, score: 5.8 },
+    { id: 20, name: "Do Khanh Linh", age: 19, score: 8.2 }
+];
+
+// yeu cau 1
+// students.forEach ( function(student){
+//     console.log(`ID : ${student.id}`);
+//     console.log(`Tên : ${student.name}`);
+//     console.log(`Tuổi : ${student.age}`);
+//     console.log(`Điểm : ${student.age}`);
+// });
+
+//yeu cau 2
+// function isPassed(students) {
+//     for ( var i=0 ; i< students.length; i++){
+//         if (students[i].score >= 5){
+//             console.log(`${students[i].name}: Đạt`);
+//         }
+//         else{
+//             console.log(`${students[i].name}: Khong Đạt`);
+//         }
+//     }
+// };
+
+// isPassed(students);
+//yeu cau 3
+// const passedStudents = students.filter(students => students.score >= 5);
+// console.log(passedStudents);
+
+
+// // yeu cau 4
+// const passedStudents = students.filter(students => students.score < 5);
+// students.forEach(function(students){
+//     if ( students.score <5 ){
+//          console.log(`${students.name}: Khong Đạt`);
+//     }
+// });
+
+// yeu cau 5
+// const passedStudents = students.filter(students => students.age >= 21);
+// passedStudents.forEach(function(passedStudents){
+//          console.log(`Ten: ${passedStudents.name}`);
+//          console.log(`Tuổi : ${passedStudents.age}`);
+    
+// });
+// yeu cau 6
+// const ketQua = students
+//     .filter(student => student.score >= 8)
+//     .map(student => `${student.name} - Học sinh giỏi`);
+
+// console.log(ketQua);
+
+// const getClassification = (score) => {
+//     switch (true) {
+//         case (score >= 8):
+//             return "Giỏi";
+//         case (score >= 6.5):
+//             return "Khá";
+//         case (score >= 5):
+//             return "Trung bình";
+//         default:
+//             return "Yếu";
+//     }
+// };
+
+// const danhSachPhanLoai = students.map(student => `${student.name} - ${getClassification(student.score)}`);
+
+// console.log(danhSachPhanLoai);
+
+// yeu cau 8
+const result = students
+    .filter(student => student.score >= 6.5)
+    .map(student => `${student.name} - ${student.score} diem`);
+console.log(result);
